@@ -172,17 +172,17 @@ class Project(ListableObject, CreatableObject, UpdatableObject):
 
 
 class Experiment(CreatableChildObject, UpdatableObject, DeletableObject):
-  parent_resource = Project
-  editable_fields = ['audience_ids',
-                     'activation_mode',
-                     'description',
-                     'edit_url',
-                     'status',
-                     'custom_css',
-                     'custom_js',
-                     'percentage_included',
-                     'url_conditions',
-                     'experiment_type']
+    parent_resource = Project
+    editable_fields = ['audience_ids',
+                       'activation_mode',
+                       'description',
+                       'edit_url',
+                       'status',
+                       'custom_css',
+                       'custom_js',
+                       'percentage_included',
+                       'url_conditions',
+                       'experiment_type']
 
     def results(self):
         return self.get_child_objects(Result)
